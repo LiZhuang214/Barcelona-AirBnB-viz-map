@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Create a time slider</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css" integrity="sha256-YR4HrDE479EpYZgeTkQfgVJq08+277UXxMLbi/YP69o=" crossorigin="anonymous" />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body>
+
+
+
+<div id="map" class="map"></div>
+<!-- Legend -->
+<div class="legend">
+  <ul class="list"><p class="center space">Room Type</p>
+    <li><span style="background: #66ffcc"></span>Entire home/apt</li>
+    <li><span style="background: #f78ae0"></span>Private Room</li>
+    <li><span style="background: #f1b707"></span>Shared Room</li>
+  </ul>
+</div>
+
+<div class='map-overlay top'>
+  <!-- filter Slider -->
+            <div class='map-overlay-inner'>
+              <h1>Filter by Value</h1><h3 style="color: #990099; font-style: italic; font-size:12px;">Click on one of the cluster circles before filtering</h3><br>
+              <div class='session' id='sliderbar'>
+                <h2>Price:</h2>
+                <h3>Price Lower Than: <label id='idprice'> 1000 </label> €</h3>
+                <input id='slider2' class='row' type='range' min='0' max='1000' step='10' value='1000' />
+              </div><br><br>
+
+
+              <div class='session' id='sliderbar'>
+                <h2>Overall Satisfaction:</h2><h4 style="color: #2f5687; font-style: italic; margin:0px">-1: Unsatisfy; 1: Satisfy</h4>
+                <h3 style="margin:0px; margin-bottom:15px">Satisfaction Higer Than: <label id='idpolarity'> -1 </label> </h3>
+                <input id='slider3' class='row' type='range' min='-1' max='1' step='0.01' value='-1' />
+              </div>
+            </div>
+
+
+
+<nav id='filter-group' class='filter-group'> </nav>
+
+
+
+<script src='js/main.js'></script>
+<script src='js/underscore.js'></script>
+<script src='js/leaflet.js'></script>
+<script src='js/jquery-2.2.0.js'></script>
+<script src='js/nouislider.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js" integrity="sha256-6BZRSENq3kxI4YYBDqJ23xg0r1GwTHEpvp3okdaIqBw=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js" integrity="sha256-O4179En8zabOlPYBNvGp8cF0uh0vnSZpW4Q6Ul1h+8c=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+</body>
+</html>
